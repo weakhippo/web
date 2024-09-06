@@ -1,0 +1,294 @@
+/*
+Theme Name: Twenty Sixteen
+Theme URI: https://wordpress.org/themes/twentysixteen/
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: Twenty Sixteen is a modernized take on an ever-popular WordPress layout — the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. Twenty Sixteen will make your WordPress look beautiful everywhere.
+Version: 2.0
+Requires at least: 4.4
+Requires PHP: 5.2.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, two-columns, right-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, blog
+Text Domain: twentysixteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500&amp;family=Montserrat:wght@100;200;300;400;500;600&amp;family=Open+Sans:wght@500;700&amp;family=Poppins:wght@100;200;300;400;500;600;700&amp;family=Quicksand:wght@300;400;500;600;700&amp;family=Roboto:wght@300;400;500&amp;family=Rubik:wght@300;400;500;600;700&amp;family=Shippori+Antique+B1&amp;display=swap');
+*{font-family: 'Quicksand', sans-serif;}
+
+ul.social-icons{margin-top:15px;}
+ul.social-icons li{display:inline-block;padding-right:5px}
+ul.social-icons li a{display: inline-block;
+width: 40px;
+height: 40px;
+line-height: 40px;
+color: white;
+border: 1px solid white;
+text-align: center;}
+
+
+.content {
+  width: 80%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.centerplease {
+  margin: 0 auto;
+  /*max-width: 270px;*/
+  text-align: center;
+  font-size: 40px;
+}
+
+/*Question*/
+.question {
+  position: relative;
+  background: #cccbcb;
+  margin: 0;
+  padding: 11px 7px 10px 35px !important;
+  display: block;
+  width:100%;
+  cursor: pointer;
+}
+/*Answer*/
+.answers {
+  padding: 0px 15px;
+  margin: 5px 0;
+  width:100%!important;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.questions:checked ~ .answers{
+  height: auto;
+  opacity: 1;
+  padding: 15px;
+  
+}
+
+/*FAQ Toggle*/
+.plus {
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 4px;
+  z-index: 5;
+  font-size: 2em;
+  line-height: 100%;
+  -webkit-user-select: none;    
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
+
+}
+
+.questions:checked ~ .plus {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+
+}
+
+.questions {
+  display: none;
+  
+}
+.faq-pg{
+	padding-bottom: 30px;
+	/*background: #e3dfdf;*/
+}
+.faq-pg .content label:before{
+	border: 0px !important;
+}
+
+.faq-pg label{
+	height: auto;
+}
+.answers ul{
+	    margin-left: 40px;
+    list-style: disc;
+}
+img.wp-image-624 {
+display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+ ul.goals li {
+    margin-bottom: 0;
+    list-style-type: circle;
+    margin-left: 18px;
+}
+.blog-details h3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.blog-details p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 10px;
+}
+@media (max-width:767px){
+.page-banner {  height: auto;}
+	img.wp-image-624 {
+    width: 100%;
+    height: 204px;
+}
+}
+.blog-thumb>a img {
+    height: 200px;
+}
+
+.fixed-Whatsapp a {
+    background: #24cc63;
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: #fff;
+    box-shadow: 0 3px 7px rgb(0 0 0 / 15%);
+}
+
+.fixed-Whatsapp {
+    position: fixed;
+    bottom: 125px;
+    right: 23px;
+    z-index: 999;
+    padding: 0;
+    margin: 0;
+}
+select.wpcf7-select {
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+}
+.single-form input[type=number] {
+    background: #e4e4e4 none repeat scroll 0 0;
+    border: medium none;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    padding: 19px 28px;
+    width: 100%;
+}
+
+
+/* -------------current-opning-form-section---------------- */
+section#multi-card {
+    background: #e7e9fb;
+    padding: 80px 0;
+}
+
+.requirement-form.resume input, textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 7px 15px;
+}
+.form-card .requirement-form input{
+	padding:7px 15px!important;
+	border: 1px solid #ccc;
+}
+.requirement-form input, textarea::placeholder{
+    color: #2e2e2e ;
+    font-size: 14px;
+	font-family: 'Quicksand', sans-serif;
+	font-weight:600;
+} 
+.form-heading {
+    background: #1f2767;
+    padding: 12px 0;
+    color: #fff;
+    text-align: center;
+    font-size:18px;
+    font-weight:600;
+    
+}
+
+.form-card .requirement-form .sub-btn{
+    width: 110px;
+    border-radius: 30px;
+    padding: 7px 15px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+/*     margin-right: 20px; */
+    border: 2px solid #fb236a;
+    background: #fb236a;
+    transition: all .4s ease;
+}
+.form-card .requirement-form .reset-btn{
+    width: 110px;
+    border-radius: 30px;
+    padding: 7px 15px;
+    color: #fb236a;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+    border: 2px solid #fb236a;
+    background: #fff;
+    transition: all .4s ease;
+}
+input.sub-btn:hover{
+    color: #fb236a;
+    background: #fff;
+}
+input.reset-btn:hover, button.reset-btn:hover{
+    background: #fb236a;
+    color: #fff;
+}
+
+.form-card {
+    box-shadow: -2px -1px 11px -2px rgb(0 0 0 / 58%);
+    padding: 30px 30px;
+    height:100% ;
+	background:#fff;
+}
+.form-card .requirement-form textarea{
+	min-height: 50px!important;
+/* 	margin-top:20px; */
+}
+.req-form-btns {
+    display: flex;
+    justify-content: space-between;
+}
+.form-card .requirement-form  input.patient-field {
+    margin-bottom: 0px;
+}
+.form-card .heading-extra-spacing{
+	margin-bottom:20px;
+	font-family: 'Quicksand', sans-serif;
+}
+.form-card .requirement-form .file-choose-extra-spacing{
+	margin-top:20px;
+}
